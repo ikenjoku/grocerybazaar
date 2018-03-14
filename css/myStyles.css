@@ -108,6 +108,12 @@ footer nav {
     margin: 50px;
 }
 
+@media screen and (max-width: 550px) {
+    #detailCard {
+        margin: 10px;
+    }
+}
+
 #detailCard h5 {
     text-align: center;
     font-weight: 900;

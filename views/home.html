@@ -1,0 +1,28 @@
+<div id="homePage">
+    <h1 class="container-fluid" id="welcomeText">Welcome Grocery Bazaar Store</h1>
+
+    <div ng-controller="HomeController">
+        <div class="row text-right">
+            <div class="checkbox" id="toggleCheck">
+                <label>
+                    <input type="checkbox" ng-model="noWrapSlides">
+                        Toggle Slide
+                </label>
+            </div>
+        </div>
+        <div style="height: 305px">
+            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <a href="#/products/0/1/{{$index}}"><img ng-src="{{slide.image}}" width="300px" height="300px" style="margin:auto;"></a>
+                    <div class="carousel-caption">
+                        <p id="carouselText">{{slide.text}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <a href="#/products"><button class="btn btn-warning goShoppingBtn">Go Shopping</button></a>
+    </div>
+</div>

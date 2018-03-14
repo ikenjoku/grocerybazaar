@@ -1,0 +1,223 @@
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+
+body {
+    background-color: white;
+    padding-bottom: 140px;
+    font-family: 'Alegreya', serif;
+}
+
+#welcomeText {
+    font-family: 'Kaushan Script', cursive;
+}
+
+#topNav {
+    background: linear-gradient(to right, rgba(107, 183, 86, 0.95), #008f68);
+    border-radius: 0px
+}
+
+#topNav a {
+    text-decoration: none;
+    color: antiquewhite
+}
+
+#topNav a::selection {
+    color: black;
+}
+
+nav>a {
+    color: #0e413369;
+    font-weight: bolder
+}
+
+#toggleBtn,
+a.nav-link {
+    color: antiquewhite;
+}
+
+footer nav {
+    font-weight: bold;
+}
+
+#footerNav {
+    background-color: #ebebeb;
+    color: black;
+}
+
+.goShoppingBtn {
+    margin: 50px 0px;
+    border-radius: 0px;
+    padding: 10px 30px;
+    font-size: 2.3em;
+}
+
+.goShoppingBtn a {
+    text-decoration: none;
+    color: antiquewhite
+}
+
+#backBtn {
+    margin: 50px 0px;
+    border-radius: 0px;
+    padding: 10px 30px;
+    font-size: 2.3em;
+    color: antiquewhite;
+    background-color: #DFA60D
+}
+
+#backBtn a {
+    text-decoration: none;
+    color: white
+}
+
+#submitBtn {
+    margin: 50px 0px;
+    border-radius: 0px;
+    padding: 10px 30px;
+    font-size: 2.3em;
+    color: antiquewhite;
+    background-color: #DFA60D
+}
+
+#detailCard {
+    background-color: #ffffff;
+    margin: 50px;
+}
+
+#detailCard h5 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+#detailCard .description {
+    text-align: justify
+}
+
+#detailCard p {
+    text-align: center;
+}
+
+.price {
+    background-color: #DFA60D;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: 200;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 80px;
+    margin: 20px auto;
+}
+
+.description {
+    max-width: 400px;
+    margin: 10px auto;
+    padding-right: 20px;
+}
+
+.qtyInput {
+    width: 40px;
+    border-radius: 5px;
+    padding-left: 2px;
+}
+
+#toggleCheck {
+    padding-right: 18px
+}
+
+#navBrandTitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px
+}
+
+.navbar-nav>li>a {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px
+}
+
+.blackHover:hover {
+    color: black !important;
+}
+
+#carouselText {
+    color: black;
+    font-size: 20px
+}
+
+#footerLink,
+#showingText {
+    font-weight: bolder;
+}
+
+#showingText {
+    font-size: 20px
+}
+
+.categoryTitle,
+.subcategoryTitle {
+    cursor: pointer;
+}
+
+.categoryTitle:hover {
+    background-color: #c4e2c8;
+    font-weight: bold;
+}
+
+.subcategoryTitle:hover {
+    background-color: #fcf8e3;
+    font-weight: bold;
+}
+
+.productsImg {
+    height: 150px !important;
+}
+
+.activeCtg {
+    background-color: #008f68;
+}
+
+#aboutPage,
+#contactPage,
+#cartPage {
+    background-color: #fff;
+}
+
+#cartPage {
+    padding-bottom: 30px;
+}
+
+#paymentDetails {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+textarea {
+    resize: none;
+}
+
+span.error {
+    color: red;
+    font-weight: bold
+}
+
+.detailSlap {
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 4px 6px 17px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 6px 17px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 6px 17px -2px rgba(0, 0, 0, 0.75);
+}
+
+.pager {
+    font-size: 20px;
+}

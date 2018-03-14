@@ -1,0 +1,21 @@
+<div ng-controller="ProductController">
+    <div class="row" id="detailCard">
+        <div class="col-sm-6 text-center detailSlap">
+            <img id="productDetailImg" width="350px" height="350px" ng-src="{{product.imagelink}}" alt="Generic placeholder image ">
+        </div>
+        <div class="col-sm-6 text-center detailSlap">
+            <h5>{{product.name}}</h5>
+            <p class="">{{product.description}}</p>
+            <p class="price">{{product.price | currency}}</p>
+            <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
+            <p>In Stock: {{product.stock}}</p>
+            <hr />
+            <p>Qty: <input class="qtyInput" type="number" min="1" max="{{product.stock}}" name="" id="" value="{{product.quantity}}" ng-model="qtyToAdd"></p>
+            <p><button class="btn btn-success" ng-click="addProductToCart(product)" id="itemDetailAddBtn">Add</button></p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <a href="#/products"><button class="btn btn-warning text-center" id="backBtn">Back</button></a>
+    </div>
+
+</div>

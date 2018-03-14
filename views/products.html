@@ -1,0 +1,80 @@
+<div class="alert alert-danger" ng-show="data.error">
+    Error ({{data.error.status}}). The shop data was not loaded. <a href="/" class="alert-link">Click here to try again</a>
+</div>
+
+
+
+<div ng-controller="ProductsController" class="container-fluid" ng-hide="data.error">
+
+    <div class="row">
+        <div class="col-sm-3 sidebarPanel ">
+            <div id="productPanel" class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="panel-title" ng-click="selectCategory(); toggleUnique()">
+                        <ul class="pager">
+                            <li><a>{{textToShow}}</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="panel-body">
+                    <!-- repeat for categories -->
+                    <div class="category btn btn-block btn-default btn-lg" ng-class="getCategoryClass(item)" ng-repeat="item in altdata.products | orderBy: 'category' | unique: uniqueCriteria" ng-click="selectCategory(item)" style="white-space: normal;">{{item}}
+                    </div>
+                    <!-- stop repeat -->
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row ">
+                <!-- <p class="pull-left" id="showingText">Showing {{numItems}} {{numItems}} items in {{selectedCat}}</p> -->
+                <form class="form-inline pull-right">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="showInStock"> In Stock Only
+                          </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputAmount">Sort By</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Sort By</div>
+                            <select name="sortBy" ng-model="propertyName" class="form-control" id="" placeholder="">
+                                        <option value="none">None</option>
+                                        <option value="price">Price</option>
+                                        <option value="name">Alphabetical</option>
+                                        <option value="rating">Rating</option>
+                                    </select> </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <!-- repeat for categories -->
+                            <div ng-repeat="product in altdata.products | filter:categoryFilterFn | range: selectedPage: pageSize | InStockItems: !showInStock | orderBy:propertyName">
+                                <div class="col-xs-6 col-sm-4 col-md-3">
+                                    <div class="thumbnail">
+                                        <a href="#/products/{{product.name}}"><img class="img-responsive productsImg" ng-src={{product.imagelink}} alt="..."></a>
+                                        <div class="caption text-center">
+                                            <p>{{product.name}}</p>
+                                            <p>{{product.price | currency}}</p>
+                                            <p><a ng-click="addProductToCart(product)" class="btn btn-default btn-sm itemAddBtn" role="button"><i class="fas fa-plus"></i> Add</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- stop repeat -->
+                        </div>
+                        <div class="pull-right btn-group">
+                            <a ng-repeat="page in altdata.products | filter:categoryFilterFn | pageCount: pageSize" ng-click="selectPage($index + 1)" class="btn btn-default" ng-class="getPageClass($index + 1)">{{$index + 1}}
+                                
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

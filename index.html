@@ -15,37 +15,38 @@
 </head>
 
 <body ng-controller="bazzarStoreCtrl">
-    <nav class="navbar" id="topNav">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <div class="allButFooter">
+        <nav class="navbar" id="topNav">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                       <span class="sr-only">Toggle navigation</span>
                       <i id="toggleBtn" class="fas fa-ellipsis-v fa-3x"></i>
                     </button>
-                <a class="navbar-brand navbar-text" href="#/" id="navBrandTitle">Grocery Bazaar</a>
-            </div>
+                    <a class="navbar-brand navbar-text" href="#/" id="navBrandTitle">Grocery Bazaar</a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#/products" class="blackHover navbar-text">Shop All</a></li>
-                    <li>
-                        <a href="#/cart" class="blackHover navbar-text">
-                            <i class="fas fa-shopping-cart"></i> :
-                            <cart-summary style="font-family: 'Alegreya', serif;" />
-                        </a>
-                    </li>
-                </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/products" class="blackHover navbar-text">Shop All</a></li>
+                        <li>
+                            <a href="#/cart" class="blackHover navbar-text">
+                                <i class="fas fa-shopping-cart"></i> :
+                                <cart-summary style="font-family: 'Alegreya', serif;" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.navbar-collapse -->
+            <!-- /.container-fluid -->
+        </nav>
+        <div ng-view>
+
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <div ng-view>
-
     </div>
-
     <footer>
         <nav class="text-center" id="footerNav">
             <div class="container-fluid">

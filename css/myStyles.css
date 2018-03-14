@@ -11,14 +11,12 @@ body {
     min-height: 100%;
 }
 
+.allButFooter {
+    min-height: calc(100vh - 95px);
+}
+
 footer {
-    clear: both;
-    position: relative;
-    z-index: 10;
-    margin-bottom: 0;
-    margin-top: 200px
-    /* height: 30em;
-    margin-top: -30em; */
+    margin-top: 50px
 }
 
 #welcomeText {

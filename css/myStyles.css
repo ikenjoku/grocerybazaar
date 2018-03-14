@@ -7,8 +7,18 @@
 
 body {
     background-color: white;
-    padding-bottom: 140px;
     font-family: 'Alegreya', serif;
+    min-height: 100%;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0;
+    margin-top: 200px
+    /* height: 30em;
+    margin-top: -30em; */
 }
 
 #welcomeText {
@@ -31,6 +41,16 @@ body {
 
 nav>a {
     color: #0e413369;
+    font-weight: bolder
+}
+
+#footerNav a {
+    color: #0e413369;
+    font-weight: bolder
+}
+
+#footerNav a:hover {
+    color: black;
     font-weight: bolder
 }
 
@@ -220,4 +240,19 @@ span.error {
 
 .pager {
     font-size: 20px;
+}
+
+.detailSlap .img-responsive {
+    margin: 0 auto;
+}
+
+.detailSlap .detailImage {
+    margin-top: 41px;
+    margin-bottom: 41px;
+}
+
+@media screen and (max-width:768px) {
+    #sortForm {
+        padding: 0 10px;
+    }
 }

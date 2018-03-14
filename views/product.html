@@ -1,9 +1,9 @@
 <div ng-controller="ProductController">
-    <div class="row" id="detailCard">
-        <div class="col-sm-6 text-center detailSlap">
-            <img id="productDetailImg" width="350px" height="350px" ng-src="{{product.imagelink}}" alt="Generic placeholder image ">
+    <div class="row detailSlap" id="detailCard">
+        <div class="col-sm-6 text-center detailImage">
+            <img class="img-responsive" id="productDetailImg" width="350px" height="350px" ng-src="{{product.imagelink}}" alt="Generic placeholder image ">
         </div>
-        <div class="col-sm-6 text-center detailSlap">
+        <div class="col-sm-6 text-center ">
             <h5>{{product.name}}</h5>
             <p class="">{{product.description}}</p>
             <p class="price">{{product.price | currency}}</p>

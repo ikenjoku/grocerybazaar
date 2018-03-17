@@ -1,4 +1,4 @@
-app.constant("dataUrl", "https://webmppcapstone.blob.core.windows.net/data/itemsdata.json")
+app.constant("dataUrl", "../shared/itemsdata.json")
     .controller('bazzarStoreCtrl', function($scope, $http, dataUrl, allProducts) {
         $scope.data = {};
         $scope.altdata = {};
@@ -23,3 +23,5 @@ app.constant("dataUrl", "https://webmppcapstone.blob.core.windows.net/data/items
             });
 
     })
+
+//https://webmppcapstone.blob.core.windows.net/data/itemsdata.json
